@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <form th:action="@{/calcular}" method="post">
+    <h1>Calculadora</h1>
+    <label>Valor 1</label>
+    <input type="text" name="valor1">
+    <label>Valor 2</label>
+    <input type="text" name="valor2">
+    <label><input type="radio" name="operacao" value="soma">Soma</label>
+    <label><input type="radio" name="operacao" value="subtracao">Subtração</label>
+    <button type="submit">Calcular</button>
+  </form>
+</body>
+</html>
