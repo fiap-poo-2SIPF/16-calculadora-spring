@@ -1,0 +1,103 @@
+/* Resetando algumas margens e padding para todos os elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Definindo uma fonte padrão para a página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Centralizando o formulário e definindo um estilo de fundo */
+form {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Título do formulário */
+h1 {
+    font-size: 24px;
+    color: #4CAF50;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilizando os labels */
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* Estilizando os inputs de texto */
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Estilizando os inputs de radio */
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+/* Estilizando os botões */
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Mudança de cor quando o botão é hover */
+button:hover {
+    background-color: #45a049;
+}
+
+/* Estilo para a seção de resultado */
+section {
+    margin-top: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+section h2 {
+    font-size: 22px;
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+section p {
+    font-size: 18px;
+    color: #555;
+}
+
+/* Estilo para mensagens de erro */
+p {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}

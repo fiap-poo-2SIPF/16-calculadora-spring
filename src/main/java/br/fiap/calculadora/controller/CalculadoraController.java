@@ -14,6 +14,7 @@ public class CalculadoraController {
     private CalculadoraService service;
 
     public CalculadoraController(CalculadoraService service) {
+
         this.service = service;
     }
 
@@ -23,8 +24,19 @@ public class CalculadoraController {
                            @RequestParam String operacao,
                            Model model)
     {
-        BigDecimal resultado = service.calcular(valor1, valor2, operacao);
+        String erro = "";
+        BigDecimal resultado = null;
+
+        try {
+            resultado = service.calcular(valor1, valor2, operacao);
+        } catch (Exception e) {
+            erro = e.getMessage();
+        }
+        model.addAttribute("valor1", valor1);
+        model.addAttribute("valor2", valor2);
         model.addAttribute("resultado", resultado);
+        model.addAttribute("erro", erro);
+        model.addAttribute("operacao", operacao);
         return "index";
     }
 }

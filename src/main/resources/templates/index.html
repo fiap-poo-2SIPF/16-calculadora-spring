@@ -3,17 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="/css/style.css" th:href="@{/css/style.css}">
 </head>
 <body>
   <form th:action="@{/calcular}" method="post">
     <h1>Calculadora</h1>
     <label>Valor 1</label>
-    <input type="text" name="valor1">
+    <input type="text" name="valor1" th:value="${valor1}">
     <label>Valor 2</label>
-    <input type="text" name="valor2">
-    <label><input type="radio" name="operacao" value="soma">Soma</label>
-    <label><input type="radio" name="operacao" value="subtracao">Subtração</label>
+    <input type="text" name="valor2" th:value="${valor2}">
+    <label><input type="radio" name="operacao" value="soma" checked>Soma</label>
+    <label><input type="radio" name="operacao" value="subtracao" th:checked="${operacao} == 'subtracao'">Subtração</label>
+    <label><input type="radio" name="operacao" value="multiplicacao" th:checked="${operacao} == 'multiplicacao'">Multiplicação</label>
+    <label><input type="radio" name="operacao" value="divisao" th:checked="${operacao} == 'divisao'">Divisão</label>
     <button type="submit">Calcular</button>
   </form>
+  <section th:if="${resultado} != null">
+    <h2>Resultado</h2>
+    <p th:text="${resultado}"></p>
+  </section>
+  <p th:text="${erro}"></p>
 </body>
 </html>
